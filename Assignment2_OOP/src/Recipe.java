@@ -135,6 +135,4 @@ public class Recipe implements RecipeActions, NutritionalInfo {
 
     }
 
-
-
 }

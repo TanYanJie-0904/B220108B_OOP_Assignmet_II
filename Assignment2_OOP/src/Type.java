@@ -66,10 +66,4 @@ public class Type {
     public boolean isEmpty() {
         return ingredients.isEmpty();
     }
-
-
-
-
-
-
 }

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Recipe implements RecipeActions, NutritionalInfo {
+public class Recipe implements RecipeActions, NutritionalInfo, Comparable<Recipe> {
     private String name;
     private String description;
     private ArrayList<Type> ingredientTypes;
@@ -110,7 +110,8 @@ public class Recipe implements RecipeActions, NutritionalInfo {
         steps.add(new Step(name,description,ingredients));
     }
 
-    public double compareTo(Recipe other){
+    @Override
+    public int compareTo(Recipe other){
         return Integer.compare((int)this.calculateTotalCalories(), (int)other.calculateTotalCalories());
     }
 
